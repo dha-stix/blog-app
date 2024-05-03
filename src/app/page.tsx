@@ -7,12 +7,12 @@ import { useEffect, useState } from "react";
 import { db } from "../../firebase";
 
 
-export const shortenText = (text: string): string => {
-	return text.length <= 55 ? text : text.slice(0, 55) + "...";
-};
-
 export default function Home() {
 	const [posts, setPosts] = useState<Post[]>();
+
+	const shortenText = (text: string): string => {
+	return text.length <= 55 ? text : text.slice(0, 55) + "...";
+};
 
 	useEffect(() => {
 		fetchAllPosts();
