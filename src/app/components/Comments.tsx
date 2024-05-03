@@ -51,6 +51,7 @@ export default function Comments({
 			});
 			alert("Comment posted successfully");
 			setPostingComment(false);
+			setNewComment("")
 		} catch (err) {
 			console.log(err);
 			alert("An error occurred while posting your comment. Please try again.");
